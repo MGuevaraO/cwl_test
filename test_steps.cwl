@@ -14,5 +14,5 @@ steps:
     run: cwl-python2.cwl
     in:
       message: message
-    out: [example_out]
+    out: example_out
 
