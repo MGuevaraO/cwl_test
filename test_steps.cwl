@@ -7,7 +7,7 @@ inputs:
 outputs:
   result:
     type: File
-    outputSource: example_out
+    outputSource: helloworld/example_out
 
 steps:
   helloworld:
