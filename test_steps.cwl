@@ -4,15 +4,17 @@ class: Workflow
 
 inputs:
   message: string
+  
 outputs:
-  outfile:
-    type: File[]
-    outputSource: helloworld/example_out
+  outfiles:
+    type: File
+    outputSource: helloworld/outfile
 
 steps:
   helloworld:
     run: cwl-python2.cwl
     in:
       message: message
-    out: example_out
+    out: 
+     - outfile
 
