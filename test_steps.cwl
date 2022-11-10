@@ -5,8 +5,8 @@ class: Workflow
 inputs:
   message: string
 outputs:
-  result:
-    type: File
+  outfile:
+    type: File[]
     outputSource: helloworld/example_out
 
 steps:
