@@ -7,12 +7,15 @@ arguments:
   - position: 1
     valueFrom: $(inputs.message)
 
+stdout: $(inputs.outfile)    
+    
 inputs:
   message: string
+
+  outfile:
+    type: string
+    default: log.csv
     
 outputs:
-  example_out:
-    type: string
-    outputBinding:
-      glob: hello.txt
-    
+  outfile:
+    type: stdout    
