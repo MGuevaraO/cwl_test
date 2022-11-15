@@ -4,7 +4,6 @@ class: Workflow
 
 inputs:
   message: string
-  workingDir : string
   
 outputs:
   outfiles:
@@ -16,7 +15,7 @@ steps:
     run: cwl-python2.cwl
     in:
       message: message
-      workingDir: workingDir
     out: 
      - outfile
+
 
