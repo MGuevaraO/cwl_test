@@ -1,19 +1,30 @@
 cwlVersion: v1.0
 class: CommandLineTool
 
-baseCommand: ["python", "/home/mg254721/Dropbox/test_cwl/print_msg.py"]
+baseCommand: python
 
-arguments:
-  - position: 1
-    valueFrom: $(inputs.message)
-
-    
 inputs:
-  message: string
+  message: 
+    type: string
+    inputBinding:
+      position: 2
 
-    
+  script:
+    type: File
+    inputBinding:
+      position: 1
+    default:
+      class: File
+      location: print_msg.py
+  
+
 outputs:
-  outfile:
+  outfile1:
     type: File
     outputBinding:
-      glob: out_python.txt
+      glob: "*"
+
+  outfile2:
+    type: File
+    outputBinding:
+      glob: "*"
