@@ -9,6 +9,9 @@ outputs:
   outfiles:
     type: File
     outputSource: helloworld/outfile
+  outfiles2:
+    type: File
+    outputSource: helloworld/outfile2
 
 steps:
   helloworld:
@@ -17,5 +20,6 @@ steps:
       message: message
     out: 
      - outfile
+     - outfile2
 
 
