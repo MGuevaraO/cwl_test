@@ -6,10 +6,10 @@ inputs:
   message: string
   
 outputs:
-  outfiles:
+  outfile1:
     type: File
-    outputSource: helloworld/outfile
-  outfiles2:
+    outputSource: helloworld/outfile1
+  outfile2:
     type: File
     outputSource: helloworld/outfile2
 
@@ -18,6 +18,6 @@ steps:
     run: cwl-python2.cwl
     in:
       message: message
-    out: [outfile, outfile2]
+    out: [outfile1, outfile2]
 
 
