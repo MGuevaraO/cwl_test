@@ -18,8 +18,6 @@ steps:
     run: cwl-python2.cwl
     in:
       message: message
-    out: 
-     - outfile
-     - outfile2
+    out: [outfile, outfile2]
 
 
